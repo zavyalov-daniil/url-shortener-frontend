@@ -32,11 +32,11 @@ export default function Home() {
 
   const validate = (originalUrl) => {
     if (validator.isURL(originalUrl)) {
-      setErrorMessage("You Entered a Valid URL");
+      setErrorMessage("Вы ввели корректный URL");
       setValidationClass("is-valid");
       setValidationFeedback("valid-feedback");
     } else {
-      setErrorMessage("You Entered a Invalid URL");
+      setErrorMessage("Вы ввели некорректный URL");
       setValidationClass("is-invalid");
       setValidationFeedback("invalid-feedback");
     }
@@ -44,7 +44,7 @@ export default function Home() {
 
   const copyToClipboard = () => {
     copy(shortenUrl.shortenUrl);
-    setCopyButton("Copied");
+    setCopyButton("Скопировано");
   };
 
   return (

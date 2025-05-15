@@ -1,6 +1,6 @@
 {
-  "short_name": "Сокращение ссылок",
-  "name": "Сокращение ссылок",
+  "short_name": "URL Shortener",
+  "name": "URL Shortener",
   "icons": [
     {
       "src": "favicon.ico",

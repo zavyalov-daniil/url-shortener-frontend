@@ -10,17 +10,17 @@ import sun from "../assets/sun.png";
 export default function Header(props) {
 
   const[theme,setTheme] = useState(moon);
-  const[themeName,setThemeName] = useState('Dark');
+  const[themeName,setThemeName] = useState('Тема');
   const[themeStyle,setThemeStyle] = useState('light-theme');
   
   const toggleTheme = () => {
         if (theme === moon) {
           setTheme(sun);
-          setThemeName('Light');
+          setThemeName('Тема');
           setThemeStyle('dark-theme');
         } else {
           setTheme(moon);
-          setThemeName('Dark');
+          setThemeName('Тема');
           setThemeStyle('light-theme');
         }
 
@@ -42,7 +42,7 @@ export default function Header(props) {
             height="40"
             className="d-inline-block align-text-center me-2"
           />
-          Get URL
+          URL Shortener
         </a>
         <button
           className="navbar-toggler border border-0"
@@ -61,10 +61,10 @@ export default function Header(props) {
         >
           <div className="navbar-nav fs-5 ">
             <Link to="/" className="nav-link text-white me-3" aria-current="page">
-              Home
+              Основная страница
             </Link>
             <Link to="/clicks"className="nav-link text-white">
-              Your URL Clicks
+              Статистика
             </Link>
           </div>
         </div>

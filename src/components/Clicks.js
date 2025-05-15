@@ -21,7 +21,7 @@ export default function Clicks() {
       .then((response) => setUrlDetails(response.data))
       .catch((error) => {
         console.clear();
-        setErrorMessage("This Short URL Does Not Exist");
+        setErrorMessage("Короткий URL не существует");
         setValidationClass("is-invalid");
         setValidationFeedback("invalid-feedback");
       });
@@ -29,11 +29,11 @@ export default function Clicks() {
 
   const validate = (originalUrl) => {
     if (validator.isURL(originalUrl)) {
-      setErrorMessage("You Entered a Valid URL");
+      setErrorMessage("Вы ввели корректный URL");
       setValidationClass("is-valid");
       setValidationFeedback("valid-feedback");
     } else {
-      setErrorMessage("You Entered a Invalid URL");
+      setErrorMessage("Вы ввели некорректный URL");
       setValidationClass("is-invalid");
       setValidationFeedback("invalid-feedback");
     }
@@ -44,9 +44,9 @@ export default function Clicks() {
       <div className="row">
         <div className="col-md-6">
           <div className="intro animate__animated animate__fadeInLeft animate__slow">
-            <span className="short-intro">Paste your Short Link</span>
+            <span className="short-intro">Введите короткую ссылку</span>
             <br />
-            <span>and Check your Clicks</span>
+            <span>и посмотрите статистику</span>
           </div>
           <form onSubmit={handleClickSubmit}>
             <div className="input-group px-4 pt-4">
@@ -56,7 +56,7 @@ export default function Clicks() {
               <input
                 type="text"
                 className={`form-control ${validationClass}`}
-                placeholder="Paste your short link"
+                placeholder="Вставьте короткую ссылку"
                 aria-label="Username"
                 aria-describedby="basic-addon1"
                 value={userShortUrl}
@@ -64,7 +64,7 @@ export default function Clicks() {
               />
               <button className="btn btn-dark" type="submit" id="button-addon2">
                 <i className="bi bi-bar-chart-line-fill"> </i>
-                Check
+                Посмотреть
               </button>
               <div className={`cardStyle text-center ${validationFeedback}`}>
                 {errorMessage}
